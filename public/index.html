@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>FCC-fileinfo microservice</title>
+	<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container center">
+		<h3>URL fileinfo microservice</h3>
+		<p>Select a file, submit form and get filesize.</p><br /> <br />
+		<form method="post" enctype="multipart/form-data" action="/fileinfo">
+			<input type="file" name="upload" id="file-input">
+			<label for="file-input" class="button">Select file</label>
+			<button type="submit">Send</button>
+		</form>
+		<h3>Example usage ("API") - post formdata to this url:</h3>
+		<pre><a href="https://fcc-fileinfo.herokuapp.com/fileinfo">https://fcc-fileinfo.herokuapp.com/fileinfo</a></pre>
+		<h3>Example output:</h3>
+		<pre>{  <br/>  "filesize": 12534684<br/>}</pre>
+		<p>Filesize is outputed in bytes!</p>
+	</div>
+</body>
+
+</html>
